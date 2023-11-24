@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet" />
+
+    <title>Sudoku Solver</title>
+  </head>
+
+  <body>
+    <h1>Sudoku Solver</h1>
+    <div id="sudoku-container" class="grid display-grid"></div>
+    <button id="btn-is-valid">Vérifier la validité</button>
+    <button id="btn-solve">Résoudre</button>
+    <button id="btn-clear">Reset</button>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <p id="modal-text">{text}</p>
+      </div>
+    </div>
+  </body>
+
+  <script src="solver.js"></script>
+  <script src="draw.js"></script>
+</html>

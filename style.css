@@ -1,0 +1,81 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+/* Style Sudoku */
+.display-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+  grid-template-rows: repeat(3, 1fr);
+}
+.border-box{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.grid{
+  height: 450px;
+  width: 450px;
+  border: solid black 1px;
+  margin-bottom: 1rem;
+}
+.square{
+  height: 150px;
+  width: 150px;
+  border: solid black 1px;
+  overflow: hidden;
+}
+.case{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border: solid #aaaaaa 1px;
+}
+.element-in-case{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  font-size:x-large;
+}
+
+/* Style Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px; /* Ajout d'une largeur maximale pour la lisibilité */
+}
+.close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
