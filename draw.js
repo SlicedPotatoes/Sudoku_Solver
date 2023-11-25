@@ -61,7 +61,15 @@ function init() {
       return;
     }
 
+    let startTime = new Date();
+
     solve(sudoku);
+
+    let endTime = new Date();
+
+    let elapsedSeconds = (endTime - startTime) / 1000;
+
+    console.log("Temps écoulé: " + elapsedSeconds + " secondes");
 
     if (sudoku.isValid()) {
       for (let y = 0; y < GRID_SIZE; y++) {
@@ -97,15 +105,12 @@ function getSudoku() {
     .fill(0)
     .map(() => new Array(GRID_SIZE).fill(0));
   for (let y = 0; y < GRID_SIZE; y++) {
-    let str = "";
     for (let x = 0; x < GRID_SIZE; x++) {
       let value = document.getElementById(`input-${y + "_" + x}`).value;
       if (value != "") {
         grid[y][x] = parseInt(value);
       }
-      str += grid[y][x] + " ";
     }
-    console.log(str);
   }
 
   let sudoku = new Sudoku(grid);
